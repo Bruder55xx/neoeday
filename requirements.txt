@@ -1,0 +1,5 @@
+asyncio
+aiohttp
+uuid
+cloudscraper
+loguru
