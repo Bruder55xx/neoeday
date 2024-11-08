@@ -4,7 +4,19 @@ import time
 import uuid
 import cloudscraper  
 from loguru import logger
+from keep_alive import keep_alive
+import websockets
+from loguru import logger
+from flask import Flask
+# Flask application
+app = Flask(__name__)
 
+@app.route('/')
+def index():
+    return "Hello World!"
+
+def run_flask():
+    app.run(debug=True)
 
 def show_copyright():
     copyright_info = """
@@ -262,6 +274,7 @@ async def main():
 
 if __name__ == '__main__':
     show_copyright()
+    keep_alive()
     print("Welcome to the main program!")
     try:
         asyncio.run(main())
