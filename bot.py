@@ -19,13 +19,6 @@ def show_copyright():
     *****************************************************    """
     print(copyright_info)
 
-    confirm = input("Press Enter to continue or Ctrl+C to exit... ")
-
-    if confirm.strip() == "":
-        print("Continuing with the program...")
-    else:
-        print("Exiting the program.")
-        exit()
 
 
 # Constants
